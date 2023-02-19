@@ -17,9 +17,9 @@ public class StudentVersion {
             else if (choice.equals("1")){
                 double x = getNumber(1);
                 double y = getNumber(2);
-                //Changed variable type to "double"
+                //1 - Changed variable type to "double"
                 double total = sumMethod(x,y);
-                //Variable missplelt
+                //2 - Variable missplelt
                 display(total);
                 run = checkFinish();
             }
@@ -33,16 +33,16 @@ public class StudentVersion {
             else if (choice.equals("3")){
                 double x = getNumber(1);
                 double y = getNumber(2);
-                // Syntax error, methods are case-sensitive
+                // 3 - Syntax error, methods are case-sensitive
                 double total = multiplyMethod(x,y);
                 display(total);
                 run = checkFinish();
             }
-            //Change "else" for "else if"
+            //4 - Change "else" for "else if"
             else if (choice.equals("4")){
                 double x = getNumber(1);
                 double y = getNumber(2);
-                //Added a conditional to check for division by zero,
+                ///5 - Added a conditional to check for division by zero,
                 //It will otherwise return "infinity", calculation error
                 if (y != 0) {
                     double total = divideMethod(x, y);
@@ -124,7 +124,8 @@ public class StudentVersion {
 
     public static double divideMethod(double n, double m){
         System.out.println("When dividing the numbers");
-        return ((double)n / m);
+        //typecasting not needed as "n" is already double
+        return (/*(double)*/n / m);
     }
 
     public static void display(double sum){
